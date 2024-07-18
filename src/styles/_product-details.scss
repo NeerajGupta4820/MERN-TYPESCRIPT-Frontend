@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.product-details-main {
+  overflow: hidden;
+  width: 100vw;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: 'Varela Round', sans-serif;
+
+  .product-details {
+    display: flex;
+    flex-direction: row;
+
+    .product-details-img {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+
+      .product-main-img {
+        max-height: 35rem;
+        max-width: 40rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      .product-thumbs {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: auto;
+
+        .product-thumb-img {
+          max-height: 6.5rem;
+          max-width: 6.5rem;
+          object-fit: cover;
+          cursor: pointer;
+          border: 1px solid #ddd;
+          padding: 5px;
+          transition: transform 0.3s;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    .product-details-info {
+      flex: 2;
+      border: 1px solid #ddd;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-height: 35rem;
+      overflow: hidden;
+      overflow-y: auto;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .product-rating {
+        font-size: 1.3rem;
+        color: #e03b12;
+      }
+
+      h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 20px;
+        color: #e03b12;
+        margin-bottom: 8px;
+      }
+
+      h4 {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+      }
+
+      button.AddToCart {
+        background-color: #f0c14b;
+        color: #111;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #ddb347;
+        }
+
+        svg {
+          margin-right: 8px;
+        }
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        color: #007bff;
+        cursor: pointer;
+        text-decoration: underline;
+        font-size: 17px;
+        margin-bottom: 12px;
+
+        &:hover {
+          color: #0056b3;
+        }
+      }
+    }
+  }
+
+  h2 {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    text-decoration: underline;
+  }
+
+  .product-slider,
+  .categories .category-products {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 100%;
+
+    .slider-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .slider-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: calc(100% - 60px);
+
+        .product-card {
+          flex: 0 0 calc(25% - 30px);
+          transition: transform 0.3s ease-in-out;
+          margin: 1rem;
+        }
+      }
+
+      .slider-button {
+        background: #c9c9c9;
+        border: none;
+        color: #080808;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        font-size: 1.5rem;
+        color: #3f3e3e;
+
+        &:hover {
+          background: #0056b3;
+        }
+
+        &.prev {
+          margin-right: 0px;
+        }
+
+        &.next {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+
+  .product-reviews {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      text-decoration: underline;
+    }
+
+    .reviews-list {
+      .review-item {
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+
+        h4 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+          color: #333;
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+          color: #555;
+        }
+
+        .review-rating {
+          font-size: 1.3rem;
+          color: #e03b12;
+        }
+      }
+    }
+
+    form {
+      margin-top: 2rem;
+
+      label {
+        display: block;
+        font-size: 1rem;
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s;
+
+        &:focus {
+          border-color: #0056b3;
+          outline: none;
+        }
+      }
+
+      textarea {
+        height: 100px;
+        resize: vertical;
+      }
+
+      button {
+        background-color: #0056b3;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #004494;
+        }
+      }
+    }
+  }
+
+  // Media Queries
+  @media (max-width: 1200px) {
+    .product-details {
+      // flex-direction: column;
+      gap: 0 !important;
+      .product-details-img {
+        .product-main-img {
+          max-width: 70%;
+        }
+      }
+      .product-details-info {
+        flex: 0.6;
+       }
+    }
+
+    .product-slider .slider-container .slider-track .product-card {
+      // flex: 0 0 calc(33.33% - 20px);
+    }
+  }
+  @media (max-width: 1000px) {
+    .product-details {
+      flex-direction: column;
+
+      .product-details-img {
+        flex-direction: column;
+
+        .product-main-img {
+          max-width: 100%;
+          order: 1;
+        }
+
+        .product-thumbs {
+          order: 2;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          .product-thumb-img {
+            max-width: 6rem;
+          }
+        }
+      }
+
+      .product-details-info {
+        max-height: none;
+        margin-top: 2rem;
+      }
+    }
+
+    .product-slider .slider-container .slider-track .product-card {
+      flex: 0 0 calc(33.33% - 20px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .product-details-info h1 {
+      font-size: 24px;
+    }
+
+    .product-details-info h3 {
+      font-size: 18px;
+    }
+
+    .product-details-info h4 {
+      font-size: 14px;
+    }
+
+    .product-details-info p {
+      font-size: 12px;
+    }
+
+    .product-slider .slider-container .slider-track .product-card {
+      flex: 0 0 calc(50% - 20px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .product-details-info h1 {
+      font-size: 20px;
+    }
+
+    .product-details-info h3 {
+      font-size: 16px;
+    }
+
+    .product-details-info h4 {
+      font-size: 14px;
+    }
+
+    .product-details-info p {
+      font-size: 12px;
+    }
+
+    .product-slider .slider-container .slider-track .product-card {
+      flex: 0 0 calc(100% - 20px);
+      margin: 0.5rem;
+    }
+  }
+
+  @media (min-width: 1100px) and (max-width: 1372px) {
+    .product-slider,
+    .categories .category-products {
+      .slider-container {
+        width: calc(100% - 30px);
+        .slider-button{
+          font-size: 0.8rem;
+          border-radius: 100px;
+          padding: 10px 12px;
+        }
+        .slider-track {
+          .product-card {
+            display: flex;
+            flex-direction: column;
+            height: 27rem; 
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1099px) {
+    .product-slider,
+    .categories .category-products {
+      // padding: 0.5rem;
+      .slider-container {
+        width: calc(100% - 20px);
+        .slider-button{
+          font-size: 0.8rem;
+          border-radius: 100px;
+          padding: 10px 12px;
+        }
+        .slider-track {
+          margin-right: 1.2rem;
+          margin-left: -0.2rem;
+          .product-card {
+            display: flex;
+            flex-direction: column;
+            height: 21rem; 
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .product-slider,
+    .categories .category-products {
+      padding: 0.5rem;
+      .slider-container {
+        width: calc(100% - 30px);
+        .slider-button{
+          font-size: 0.8rem;
+          border-radius: 100px;
+          padding: 10px 12px;
+        }
+        .slider-track {
+          .product-card {
+            display: flex;
+            flex-direction: column;
+            height: 23rem; 
+            flex: 0 0 calc(50% - 20px);  
+            margin: 0.7rem; 
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 450px){
+    .product-slider,
+    .categories .category-products{
+      .slider-container {
+        padding: auto;
+        width: auto;
+        .slider-track {
+          display: block;
+          .product-card {
+            height: 20rem; 
+            width: auto;
+            // min-width: 12rem;
+            flex: 0 0 calc(50% - 30px);  
+            margin: 1rem; 
+          }
+        }
+      }
+    }
+  }
+
+  .product-reviews {
+    padding: 1rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .reviews-list .review-item {
+      padding: 0.5rem;
+
+      h4 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    form label {
+      font-size: 0.9rem;
+    }
+
+    form input,
+    form textarea {
+      font-size: 0.9rem;
+      padding: 0.4rem;
+    }
+
+    form button {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
