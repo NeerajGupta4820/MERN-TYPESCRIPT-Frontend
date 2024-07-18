@@ -107,7 +107,7 @@ const Home = () => {
           <div className="slider-container">
             <button className="slider-button prev" onClick={handlePrevClick}>&lt;</button>
             <div className="slider-track">
-              {latestProductsData?.products?.length > 0 && getProductsToShow().map((product: Product) => (
+              { getProductsToShow().map((product: Product) => (
                 <ProductCard
                   key={product._id}
                   productId={product._id}
